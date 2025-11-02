@@ -22,6 +22,6 @@ it doesn't have any lifecycle management   ----->  It follows lifecycle manageme
 
 Ansible-vs-Puppet-vs-Chef-ipcisco.
 
-![Ansible-vs-Puppet-vs-Chef](Ansible-vs-Puppet-vs-Chef.jpg)
+![Ansible-vs-Puppet-vs-Chef](Ansible-vs-Puppet-vs-Chef-ipcisco.jpg)
 
 
