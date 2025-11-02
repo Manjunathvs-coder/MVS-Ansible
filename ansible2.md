@@ -7,6 +7,10 @@ Topics:
 2. Verbocity
 3. Pre-task and Post-task
 4. Error Handling (ignore_errors: yes)
+     a. block
+     b. rescue
+     c. always
+5. Variables
 
 <h1>Register</h1>
 Register is going to store the data it is nothing but a variable.
@@ -123,4 +127,21 @@ usally if we have an error in between it skips the upcoming tasks, so if we use 
           debug:
             msg: i have successfully executed this
 
+```
+
+<h2>Variables</h2>
+
+we can store it in vars and re-use inside the code
+
+```yaml
+- hosts: prod
+  become: yes
+  vars:
+    color: block
+    car: bmw
+  tasks:
+    - name: what is my car
+      debug:
+        msg: my car is {{ car }} and color is {{ color }}
+      
 ```
