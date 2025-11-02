@@ -74,6 +74,7 @@ a = argument
 
 httpd playbook
 
+```yaml
 - hosts: prod
   become: yes
   tasks:
