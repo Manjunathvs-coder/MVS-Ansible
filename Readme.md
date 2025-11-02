@@ -19,9 +19,13 @@ installation
 
 it doesn't have any lifecycle management   ----->  It follows lifecycle management as statefile
 
+==========================================================================================================
 
 Ansible-vs-Puppet-vs-Chef-ipcisco.
 
 ![Ansible-vs-Puppet-vs-Chef](Ansible-vs-Puppet-vs-Chef-ipcisco.jpg)
 
+============================================================================================================
 
+Inventary file path : /etc/asible/hosts
+Config file : /etc/ansible/ansible.cfg
