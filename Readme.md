@@ -64,8 +64,31 @@ b = become yes
 m = module
 a = argument
 
+<h3>Adhoc Commands</h3> Single line commands
+
 1. ansible dev -i inventary.txt -m yum -a "name=httpd state=present" -b
 2. ansible dev -i inventary.txt -m service -a "name=httpd state=started" -b
 3. ansible dev -i inventary.txt -m copy -a "src=index.html dest=/var/www/html" -b
 
+<h2>Playbook</h2>
+
+httpd playbook
+
+- hosts: prod
+  become: yes
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: present
+    - name: start the service
+      service:
+        name: httpd
+        state: started
+    - name: Transfer HTML file
+      copy:
+        src: index.html
+        dest: /var/www/html
+
+ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
 
