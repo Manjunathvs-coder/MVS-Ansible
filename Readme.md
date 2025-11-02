@@ -20,5 +20,8 @@ installation
 it doesn't have any lifecycle management   ----->  It follows lifecycle management as statefile
 
 
+Ansible-vs-Puppet-vs-Chef-ipcisco.
+
+![Architecture Diagram](Ansible-vs-Puppet-vs-Chef.JPEG)
 
 
