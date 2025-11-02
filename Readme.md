@@ -93,3 +93,19 @@ httpd playbook
 
 ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
 
+<h2>loop and Jinja Template </h2>
+
+```yaml
+- hosts: prod
+  become: yes
+  tasks:
+    - name: install multiple applications
+      yum:
+        name: {{ item }} #jinja
+        state: absent
+      loop:
+        - mysql
+        - unzip
+        - httpd
+
+
