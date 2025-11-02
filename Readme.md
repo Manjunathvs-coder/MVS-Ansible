@@ -132,7 +132,8 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
       debug:
         msg: running 2nd task
       tags: blue
-```
 ansible-playbook -i inventary.txt playbook.yaml --tags black
 ansible-playbook -i inventary.txt playbook.yaml --skip-tags blue
+
+```
 
