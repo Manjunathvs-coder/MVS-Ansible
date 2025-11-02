@@ -8,6 +8,7 @@ Topics:
 <h1>Register</h1>
 Register is going to store the data it is nothing but a variable.
 debug helps to view the output file with var
+
 ```yaml
 - hosts: all
   become: yes
