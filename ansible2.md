@@ -12,6 +12,8 @@ Topics:
      c. always
 5. Variables
 6. Ansible_Vault
+7. Change something in the worker node
+8. Notify and Handler
 
 <h1>Register</h1>
 Register is going to store the data it is nothing but a variable.
@@ -159,4 +161,42 @@ we can store it in vars and re-use inside the code
 <h3> ansible-vault decrypt sensitive.yaml</h3>
 
 <h3>ansible-playbook -i inventary.txt playbook.yaml -e "color=red" --ask-vault-password</h3>
+
+<h2>Change something in the worker node</h2>
+<h3>we can modify the content of the worker node by using Module : lineinfile</h3>
+
+```yaml
+- hosts: prod
+  become: yes
+  vars:
+    new_company: infosys
+  tasks:
+    - name: replace the file
+      lineinfile:
+        path: /home/ec2-user/content.txt
+        regexp: '^Company:'
+        line: 'Company: {{ new_company }}'
+```
+
+<h2>Notify and Handlers</h2>
+<h3>It executes when there is a change in the execution</h3>
+
+```yaml
+- hosts: prod
+  become: yes
+  vars:
+    new_company: infosys
+  tasks:
+    - name: replace the file
+      lineinfile:
+        path: /home/ec2-user/content.txt
+        regexp: '^Company:'
+        line: 'Company: {{ new_company }}'
+      notify: trigger
+  handlers:
+    - name: trigger
+      debug: 
+        msg: It is executed when there is a change
+
+```
 
