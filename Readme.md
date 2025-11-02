@@ -49,6 +49,23 @@ ansible all -i inventary.txt -a date
 ansible all -i inventary.txt -a uptime
 
 ==============================================================================================================
-**states**
+<h2>states</h2>
+
+present - install
+absent  -  uninstall
+startted  -  start
+restartted  -  restart
+stopped - stop
+
+<h1>Modules</h1>
+
+i = inventary file
+b = become yes
+m = module
+a = argument
+
+1. ansible dev -i inventary.txt -m yum -a "name=httpd state=present" -b
+2. ansible dev -i inventary.txt -m service -a "name=httpd state=started" -b
+3. ansible dev -i inventary.txt -m copy -a "src=index.html dest=/var/www/html" -b
 
 
