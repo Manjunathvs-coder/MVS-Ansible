@@ -11,6 +11,7 @@ Topics:
      b. rescue
      c. always
 5. Variables
+6. Ansible_Vault
 
 <h1>Register</h1>
 Register is going to store the data it is nothing but a variable.
@@ -132,6 +133,8 @@ usally if we have an error in between it skips the upcoming tasks, so if we use 
 <h2>Variables</h2>
 
 we can store it in vars and re-use inside the code
+<h3>we can use vars and vars_files</h3>
+<h3>vars_files we can save the variables and use it in the code</h3>
 
 ```yaml
 - hosts: prod
@@ -139,9 +142,12 @@ we can store it in vars and re-use inside the code
   vars:
     color: block
     car: bmw
+  vars_files:
+    sensitive.yaml
   tasks:
     - name: what is my car
       debug:
-        msg: my car is {{ car }} and color is {{ color }}
+        msg: my car is {{ car }} and color is {{ color }}. user name is {{ uname }}
       
 ```
+
