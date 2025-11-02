@@ -85,6 +85,9 @@ usally if we have an error in between it skips the upcoming tasks, so if we use 
         msg: running task4
 
 ```
+<h3>Block - in case of any error it stops the execution in that step and move to rescue</h3>
+<h3>Rescue - executes post Block failure, there is no block then it doesn't execute here</h3>
+<h3>Always - it always executes even though we have an errors</h3>
 
 ```yaml
 
