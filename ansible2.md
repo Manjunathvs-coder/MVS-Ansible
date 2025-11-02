@@ -57,6 +57,10 @@ post task - helps in installing after the main task completed.
 
 <h1>Error handling</h1>
 
+1. block
+2. rescue
+3. always
+   
 usally if we have an error in between it skips the upcoming tasks, so if we use ignore_errors : yes then it will be autometically ignore the error and execute the upcomming tasks.
 
 ```yaml
@@ -79,5 +83,41 @@ usally if we have an error in between it skips the upcoming tasks, so if we use 
     - name: task4
       debug:
         msg: running task4
+
+```
+
+```yaml
+
+- hosts: prod
+  become: yes
+  tasks:
+    - name: executing the tasks
+      block:
+        - name: task 1
+          debug:
+            msg: running task 1
+
+        - name: task_error
+          command: /bin/false
+        
+        - name: task 3
+          debug:
+            msg: running task 3
+
+      rescue:
+        - name: execute in case of an ignore_errors
+          debug: 
+            msg: i got the ignore_errors
+
+        - name: execute in case of an ignore_errors
+          command: /bin/false
+
+        - name: execute the 2nd task_error
+          debug:
+            msg: end error
+      always:
+        - name: always do this
+          debug:
+            msg: i have successfully executed this
 
 ```
