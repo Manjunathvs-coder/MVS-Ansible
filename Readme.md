@@ -10,13 +10,14 @@ Difference between Ansible vs Terraform:
 
 Aisbible:                                      Terraform:
 
-Configuration management tool            Infrastructure management tool
+Configuration management tool      --->      Infrastructure management tool
 
-it works on Procudural language          It works on Declarative Language
+it works on Procudural language    --->      It works on Declarative Language
 
-Mutable - it can be changed after        Immutable - it can't be changed, it is going to re-install it
+Mutable - it can be changed after  --->      Immutable - it can't be changed, it is going to re-install it
 installation
 
+it doesn't have any lifecycle management   ----->  It follows lifecycle management as statefile
 
 
 
