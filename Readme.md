@@ -49,8 +49,6 @@ ansible all -i inventary.txt -a date
 ansible all -i inventary.txt -a uptime
 
 ==============================================================================================================
-
-
-
+**states**
 
 
