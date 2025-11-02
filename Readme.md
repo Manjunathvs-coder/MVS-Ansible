@@ -29,3 +29,28 @@ Ansible-vs-Puppet-vs-Chef-ipcisco.
 
 Inventary file path : /etc/asible/hosts
 Config file : /etc/ansible/ansible.cfg
+
+============================================================================================================
+
+Dynamic Inventary.txt
+
+Grouping of inventary.txt prod and dev is grouping the machines, so while configuring something we can choose the specific group of machines
+
+[prod]
+ans-worker3 ansible_host=172.31.26.134 ansible_user=ec2-user ansible_private_key_file=/home/ec2-user/work3.pem
+
+[dev]
+ans-worker1 ansible_host=172.31.26.47 ansible_user=ec2-user ansible_private_key_file=/home/ec2-user/work1.pem
+ans-worker2 ansible_host=172.31.16.225 ansible_user=ec2-user ansible_private_key_file=/home/ec2-user/work1.pem
+
+============================================================================================================
+
+ansible all -i inventary.txt -a date
+ansible all -i inventary.txt -a uptime
+
+==============================================================================================================
+
+
+
+
+
