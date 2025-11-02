@@ -117,7 +117,7 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
         msg: Running 1st task
 
 ...
-
+```
 <h2>tags</h2>
 
 - hosts: all
