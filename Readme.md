@@ -116,5 +116,5 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
       debug:
         msg: Running 1st task
 
-
+...
 
