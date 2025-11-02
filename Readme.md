@@ -119,6 +119,7 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
 ...
 ```
 <h2>tags</h2>
+
 ```yaml
 - hosts: all
   become: yes
