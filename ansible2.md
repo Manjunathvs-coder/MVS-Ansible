@@ -57,6 +57,8 @@ post task - helps in installing after the main task completed.
 
 <h1>Error handling</h1>
 
+usally if we have an error in between it skips the upcoming tasks, so if we use ignore_errors : yes then it will be autometically ignore the error and execute the upcomming tasks.
+
 ```yaml
 
 - hosts: all
