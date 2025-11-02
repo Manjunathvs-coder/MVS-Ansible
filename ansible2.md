@@ -151,3 +151,12 @@ we can store it in vars and re-use inside the code
       
 ```
 
+<h2>Ansible-Vault</h2>
+
+<h3> it is used to encrypt the sensitive files with AES256 (Advanced Encryption Standard)</h3>
+<h3> ansible-vault encrypt sensitive.yaml</h3>
+
+<h3> ansible-vault decrypt sensitive.yaml</h3>
+
+<h3>ansible-playbook -i inventary.txt playbook.yaml -e "color=red" --ask-vault-password</h3>
+
