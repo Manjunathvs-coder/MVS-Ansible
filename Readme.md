@@ -107,5 +107,5 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
         - mysql
         - unzip
         - httpd
-
+---
 
