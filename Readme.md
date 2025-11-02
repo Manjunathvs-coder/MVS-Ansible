@@ -119,7 +119,7 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
 ...
 ```
 <h2>tags</h2>
-
+```yaml
 - hosts: all
   become: yes
   tasks:
@@ -131,6 +131,7 @@ ansible-playbook -i inventary.yaml playbook.yaml --syntax-check
       debug:
         msg: running 2nd task
       tags: blue
-
+```
 ansible-playbook -i inventary.txt playbook.yaml --tags black
 ansible-playbook -i inventary.txt playbook.yaml --skip-tags blue
+
