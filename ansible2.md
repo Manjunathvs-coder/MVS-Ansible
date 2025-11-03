@@ -201,3 +201,22 @@ we can store it in vars and re-use inside the code
 
 ```
 
+<h1>lininfile: specific content changes in worker node</h1>
+
+```yaml
+- hosts: prod
+  become: yes
+  vars:
+    new_company: infosys
+  tasks:
+    - name: replace the file
+      lineinfile:
+        path: /home/ec2-user/content.txt
+        regexp: '^Company:'
+        line: 'Company: {{ new_company }}'
+      notify: trigger
+  handlers:
+    - name: trigger
+      debug: 
+        msg: It is executed when there is a change
+```
