@@ -14,7 +14,8 @@ Topics:
 6. Ansible_Vault
 7. Change something in the worker node
 8. Notify and Handler
-
+9. Template Module
+    
 <h1>Register</h1>
 Register is going to store the data it is nothing but a variable.
 debug helps to view the output file with var
