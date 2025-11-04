@@ -1,8 +1,9 @@
 
 <h1>Topics</h1>
-1. Ansible_facts
-2. delegate_to and Local_host (local_action: command touch text.yaml)
-3. aync - Maximum time the task can run
+<h3>1. Ansible_facts</h3>
+<h3>delegate_to and Local_host (local_action: command touch text.yaml)</h3>
+<h3>aync - Maximum time the task can run</h3>
+<h3>poll</h3> 
   
   
 ansible-config init -disabled > ansible.cfg
